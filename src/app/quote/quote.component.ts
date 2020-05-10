@@ -8,14 +8,24 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
-    new Quote (1,'"Never, never, never give up."','" Winston Churchill"',new Date(2020,6,9)),
-    new Quote(2,'"While there is life, there is hope."','"Marcus Tullius"',new Date(2010,6,6)),
-    new Quote (3,'"Failure is success in progress."','" Anonymous "',new Date(2019,6,10)),
-    new Quote (4,'"Success demands singleness of purpose."','" Vincent "',new Date(2009,5,9)),
-    new Quote (5,'"The shortest answer is doing." ','" Lord Herbert "',new Date(2009,4,8)),
-    new Quote (6,'"Powerful dreams inspire powerful action."','" Jonathan "',new Date(2019,6,8)) 
+    new Quote (1,'"Never, never, never give up."','" Winston Churchill"',new Date(2020,6,9),"Tellvinch"),
+    new Quote(2,'"While there is life, there is hope."','"Marcus Tullius"',new Date(2010,6,6),"Tellvinch"),
+    new Quote (3,'"Failure is success in progress."','" Anonymous "',new Date(2019,6,10),"Tellvinch"),
+    new Quote (4,'"Success demands singleness of purpose."','" Vincent "',new Date(2009,5,9),"Tellvinch"),
+    new Quote (5,'"The shortest answer is doing." ','" Lord Herbert "',new Date(2009,4,8),"Tellvinch"),
+    new Quote (6,'"Powerful dreams inspire powerful action."','" Jonathan "',new Date(2019,6,8),"Tellvinch") 
   ]
-  votes = 0
+  oks:number= 0;
+  loves:number=0;
+
+  ok(){
+    this.oks=this.oks+1
+  };
+
+
+  love(){
+    this.loves=this.loves+1
+  };
   
   toggleDetails(index){
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
