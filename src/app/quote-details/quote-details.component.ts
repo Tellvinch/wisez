@@ -1,5 +1,6 @@
 import { Component, OnInit,Input, Output, EventEmitter  } from '@angular/core';
 import { Quote } from '../quote';
+import { oks } from '../quote'
 
 @Component({
   selector: 'app-quote-details',
@@ -15,6 +16,24 @@ export class QuoteDetailsComponent implements OnInit {
   quoteCreated(created:boolean){
     this.isCreated.emit(created);
   }
+
+  Ok:oks[] = [
+    {id:1}
+  ]
+  // oks=0;
+  // loves=0;
+
+  ok(){
+    this.Ok.id = this.Ok.id+1
+    
+  };
+
+  votes(vote){
+    let loves = this.loves+1
+    let oks = this.oks+1
+
+    this.votes = vote
+  };
   constructor() { }
 
   ngOnInit(): void {

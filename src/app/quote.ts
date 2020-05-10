@@ -5,6 +5,6 @@ export class Quote {
   }
 }
 
-export class Vote {
-  ok:number
+export class oks {
+  id:number
 }
