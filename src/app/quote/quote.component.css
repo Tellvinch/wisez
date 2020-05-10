@@ -1,3 +1,19 @@
+.container{
+    background: ;
+}
+
+
 .votes{
     color:darkgreen;
+}
+
+.head img {
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.head h1{
+    margin-top: 0px;
+    color: blanchedalmond;
 }
