@@ -5,14 +5,23 @@
     <ol style="padding-left: 250px;">
       <div *ngFor="let quote of quotes; let i = index">
         <li appHighlight highlightColor="yellow">
-          {{ quote.name }} Author- {{ quote.author }},Created by {{ quote.submitter }}  
-            {{ quote.createdDate | dayCount }} days ago
+          {{ quote.name }} Author- {{ quote.author }},Created by
+          {{ quote.submitter }} {{ quote.createdDate | dayCount }} days ago
         </li>
         <br />
         <div class="votes">
-          <p>{{ loves }}  :Loves</p>
-          <p>{{ oks}} :Oks</p>
+          <p>{{ loves }} :Loves</p>
+          <p>{{ oks }} :Oks</p>
+          <button class="btn btn-primary" (click)="love()">I Love</button>
+          <button
+            class="btn btn-warning"
+            style="margin-left: 15px;"
+            (click)="ok()"
+          >
+            Its Ok
+          </button>
         </div>
+        <br>
         <app-quote-details
           [quote]="quote"
           (isCreated)="createdQuote($event, i)"
