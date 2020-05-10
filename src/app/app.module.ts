@@ -8,8 +8,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { HighlightDirective } from './highlight.directive';
 
-import { DaysCountPipe } from './days-count.pipe';
-import { DayscountDirective } from './dayscount.directive';
+
 import { DayCountPipe } from './day-count.pipe';
 
 @NgModule({
@@ -19,14 +18,12 @@ import { DayCountPipe } from './day-count.pipe';
     QuoteDetailsComponent,
     QuoteFormComponent,
     HighlightDirective,
-    DaysCountPipe,
-    DayscountDirective,
     DayCountPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-    // FormsModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

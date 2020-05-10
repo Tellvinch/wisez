@@ -6,7 +6,7 @@
       <div *ngFor="let quote of quotes; let i = index">
         <li appHighlight highlightColor="yellow">
           {{ quote.name }} created by {{ quote.author }}  
-            {{ quote.createdDate | daysCount }} days ago
+            {{ quote.createdDate | dayCount }} days ago
         </li>
         <br />
         <div class="votes">
