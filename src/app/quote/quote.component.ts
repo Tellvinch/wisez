@@ -22,14 +22,10 @@ export class QuoteComponent implements OnInit {
     this.oks=this.oks+1
   };
 
-
   love(){
     this.loves=this.loves+1
   };
   
-  toggleDetails(index){
-    this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
-  }
   createdQuote(isCreated, index){
     if (isCreated) {
       this.quotes.splice(index,1);
@@ -38,6 +34,8 @@ export class QuoteComponent implements OnInit {
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quote.Length+1;
+    quote.author = quote.author
+    quote.submitter = quote.submitter
     quote.createdDate = new Date(quote.createdDate)
     this.quotes.push(quote)
   }

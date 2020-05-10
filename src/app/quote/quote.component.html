@@ -5,7 +5,7 @@
     <ol style="padding-left: 250px;">
       <div *ngFor="let quote of quotes; let i = index">
         <li appHighlight highlightColor="yellow">
-          {{ quote.name }} created by {{ quote.author }}  
+          {{ quote.name }} Author- {{ quote.author }},Created by {{ quote.submitter }}  
             {{ quote.createdDate | dayCount }} days ago
         </li>
         <br />
